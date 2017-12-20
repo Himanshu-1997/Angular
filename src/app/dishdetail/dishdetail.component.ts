@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Dish } from '../shared/dish';
+import { Comment } from '../shared/dish';
 const DISHES: Dish[] =
 	[
                          {
@@ -30,17 +31,40 @@ const DISHES: Dish[] =
                            label:'',
                            price:'2.99',
                            description:'A delectable, semi-sweet New York Style Cheese Cake, with Graham cracker crust and spiced with Indian cardamoms'                        }
-                        ];
+    ];
 @Component({
-  selector: 'app-menu',
-  templateUrl: './menu.component.html',
-  styleUrls: ['./menu.component.scss']
+  selector: 'app-dishdetail',
+  templateUrl: './dishdetail.component.html',
+  styleUrls: ['./dishdetail.component.scss']
 })
-export class MenuComponent implements OnInit {
-
-	dishes: Dish[] = DISHES;
+export class DishdetailComponent implements OnInit {
 	selectedDish: Dish[]=DISHES[0];
-	dishdetail[] = [ 'Display the details of the dish here!','Display the list of comments here'];
+	comment =[ {
+					value:'Imagine all the eatables living in Confusion!',
+					rating:'5 stars',
+					author:'--john Lemon oct,17 2012'     },
+				{
+					value:'Imagine all the eatables living in Confusion!',
+					rating:'5 stars',
+					author:'--john Lemon oct,17 2012'     },
+				{
+					value:'sends anyone to heaven,I wish I could get my mother-in-la...',
+					rating:'4 stars',
+					author:'--paul Mcvites sep,6 2014' },
+				{
+					value:'Eat it,Just eat it',
+					rating:'3 stars',
+					author:'Michael jaikishan Feb 14,2015'},
+				{
+					value:'Ultimate,reaching for the stars',
+					rating:'4 stars',
+					author:'--Ringo starry Dec 3,2013'},
+				{
+					value:'it\'s your birthday,we\'re gonna party!',
+					rating:'2 stars',
+					author:'--25 cent Dec 3,2011'}
+		];
+					
   constructor() { }
 
   ngOnInit() {
