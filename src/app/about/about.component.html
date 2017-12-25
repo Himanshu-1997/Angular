@@ -1,3 +1,65 @@
-<p>
-  about works!
-</p>
+ <div class="container"
+	fxLayout="column"
+	fxLayoutGap="30px">
+
+	<div fxFlex>
+		<div>
+			<h3>About Us</h3>
+			<hr>
+		</div>
+	</div>
+	
+	<div fxFlex="100%">
+	<div fxLayout="row">
+     <div fxFlex="70">
+         <h2>Our History</h2>
+            <p>Started in 2010, Ristorante con Fusion quickly established itself as a culinary icon par excellence in Hong Kong. With its unique brand of world fusion cuisine that can be found nowhere else, it enjoys patronage from the A-list clientele in Hong Kong.  Featuring four of the best three-star Michelin chefs in the world, you never know what will arrive on your plate the next time you visit us.</p>
+            <p>The restaurant traces its humble beginnings to <em>The Frying Pan</em>, a successful chain started by our CEO, Mr. Peter Pan, that featured for the first time the world's best cuisines in a pan.</p>
+      </div>
+            <div fxFlex="30">
+				<md-card>
+					<md-card-content>
+						<h1>Facts At a Glance</h1>
+						<div class="card-block">
+						<dl class="row">
+							<dt class="col-6">Started</dt>
+							<dd class="col-6">3 Feb. 2013</dd>
+							<dt class="col-6">Major stake Holder</dt>
+							<dd class="col-6">HK Fine Foods Inc.</dd>
+							<dt class="col-6">Last Year's Turnover</dt>
+							<dd class="col-6">$1,250,375</dd>
+							<dt class="col-6">Employees</dt>
+							<dd class="col-6">40</dd>
+						</dl>
+					</div>
+					</md-card-content>
+				</md-card>
+            </div>
+		</div>
+	</div>
+			
+			<div fxFlex>
+			<md-card>
+				<md-card-content>
+				<div class="card card-block bg-faded">
+					<blockquote class="blockquote">
+						<h3 class="mb-0">You better cut the pizza into four pieces because I'm not hungry enough to eat six.</h3>
+						<footer class="blockquote-footer">Yogi berra,
+						<cite title="Source Title">The wit and Wisdom of Yogi Berra</cite>
+						</footer>
+					</blockquote>
+				</div>
+				</md-card-content>
+			</md-card>
+			</div>
+			
+			<md-list fxFlex>
+			<h1>Corporate Leadership</h1>
+				<md-list-item *ngFor="let leader of leaders" >
+					<img md-list-avatar src={{leader.image}} alt={{leader.name}}>
+					<h1 md-line><b>{{leader.name}}</b></h1>
+					<h3 md-line>{{leader.rank}}</h3>
+					<h3 md-line>{{leader.description}}</h3>
+				</md-list-item>
+			</md-list>
+	</div>
