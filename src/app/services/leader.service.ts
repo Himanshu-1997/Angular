@@ -5,7 +5,7 @@ import { Leader } from '../shared/leader';
 @Injectable()
 export class LeaderService {
 	getFeaturedLeader(): Leader {
-    return LEADERS.filter((leader) => leader.featured)[3];
+    return LEADERS.filter((leader) => leader.featured)[0];
   }
   constructor() { }
 
