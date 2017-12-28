@@ -5,7 +5,7 @@ import { Leader } from '../shared/leader';
 @Injectable()
 export class LeaderService {
 	getFeaturedLeader(): Promise<Leader> {
-    return Promise.resolve(LEADERS.filter((leader) => leader.featured)[0]);
+    return new Promise (resolve=> { setTimeout(() => resolve(LEADERS.filter((leader) => leader.featured)[0]),2000);});
   }
   constructor() { }
 
