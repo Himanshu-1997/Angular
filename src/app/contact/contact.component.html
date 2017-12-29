@@ -39,7 +39,7 @@
         <h3>Send us your Feedback</h3>
         <p>{{ feedbackForm.value | json }} {{ feedbackForm.status | json }}</p>
 
-                <form novalidate [formGroup]="feedbackForm" (ngSubmit)="onSubmit()">
+        <form novalidate [formGroup]="feedbackForm" (ngSubmit)="onSubmit()">
           <p>
             <md-input-container class="half-width"
              dividerColor="{{(formErrors.firstname) ? 'warn' : 'primary'}}">
@@ -87,7 +87,7 @@
               </md-option>
             </md-select>
             </td>
-            </table>
+           </table>
           <p>
             <md-input-container class="full-width">
               <textarea mdInput formControlName="message" placeholder="Your Feedback" rows=12></textarea>
