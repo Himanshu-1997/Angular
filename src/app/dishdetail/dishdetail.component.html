@@ -13,7 +13,7 @@
           <h3>{{dish.name | uppercase}}</h3>
         </md-card-title>
       </md-card-header>
-      <img md-card-image src={{dish.image}} alt={{dish.name}}>
+	  <img md-card-image src="{{BaseURL + dish.image}}" alt={{dish.name}}>
       <md-card-content>
         <p>{{dish.description}}
         </p>
@@ -40,27 +40,12 @@
 			</p>
 		</md-list-item>
     </md-list>
-	<script>
-	var today = new Date();
-	var dd = today.getDate();
-	var mm = today.getMonth()+1; //January is 0!
-
-	var yyyy = today.getFullYear();
-	if(dd<10){
-		dd='0'+dd;
-	} 
-	if(mm<10){
-		mm='0'+mm;
-	} 
-	var today = dd+'/'+mm+'/'+yyyy;
-	document.getElementById("DATE").value = today;
-	</script>
 	
 		<div fxFlex fxLayoutLAlign.gt="space-around">
 		<div [hidden]="(formErrors.author) ||(formErrors.comment)">
 		<p>{{commentForm.value.comment}}</p>
 		<p>{{commentForm.value.rating }} Stars</p>
-		<p>--{{commentForm.value.author }}<input type="hidden" id="DATE"/></p>
+		<p>--{{commentForm.value.author }}</p>
 		</div>
 			<form novalidate [formGroup]="commentForm" (ngSubmit)="onSubmit()">
           <p>

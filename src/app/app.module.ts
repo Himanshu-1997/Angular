@@ -6,6 +6,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from '@angular/material'; 
 import { FlexLayoutModule } from '@angular/flex-layout';
 
+import { baseURL } from './shared/baseurl';
+import { ProcessHTTPMsgService } from './services/process-httpmsg.service';
+
 import 'hammerjs';
 import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
@@ -50,7 +53,9 @@ import { ReactiveFormsModule } from '@angular/forms';
   entryComponents: [
         LoginComponent
   ],
-  providers: [DishService,PromotionService,LeaderService],
+  providers: [DishService,PromotionService,LeaderService,
+  {provide: 'BaseURL', useValue: baseURL},
+  ProcessHTTPMsgService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
