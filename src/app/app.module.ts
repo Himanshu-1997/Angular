@@ -27,6 +27,9 @@ import { AppRoutingModule } from './app-routing/app-routing.module';
 import { LoginComponent } from './login/login.component';
  
 import { ReactiveFormsModule } from '@angular/forms';
+
+import { RestangularModule, Restangular } from 'ngx-restangular';
+import { RestangularConfigFactory } from './shared/restConfig';
  
 @NgModule({
   declarations: [
@@ -48,7 +51,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     MaterialModule,
     FlexLayoutModule,
 	AppRoutingModule,
-	ReactiveFormsModule
+	ReactiveFormsModule,
+	RestangularModule.forRoot(RestangularConfigFactory)
   ],
   entryComponents: [
         LoginComponent
