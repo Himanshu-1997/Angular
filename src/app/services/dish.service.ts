@@ -6,7 +6,7 @@ import { Http, Response } from '@angular/http';
 import { baseURL } from '../shared/baseurl';
 import { ProcessHTTPMsgService } from './process-httpmsg.service';
 import { RestangularModule, Restangular } from 'ngx-restangular';
-import { RestangularConfigFactory } from './shared/restConfig';
+import { RestangularConfigFactory } from '../shared/restConfig';
 
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/observable/of';
